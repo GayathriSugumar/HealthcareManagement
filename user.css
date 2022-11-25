@@ -1,0 +1,258 @@
+@charset "ISO-8859-1";
+.navbar {
+	height: 49px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body
+{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+::selection{
+  color: #fff;
+  background: rgb(135, 6, 178);
+}
+
+.wrapper{
+  width: 380px;
+  padding: 50px 30px 18px 30px;
+  background:  #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 10px 16px -2px rgba(55,8,242,0.75);
+}
+
+.wrapper header
+{
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.wrapper form
+{
+  margin: 40px 0;
+}
+
+form .field
+{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+form .field.shake
+{
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake
+{
+  0%, 100%{
+    margin-left: 0px;
+  }
+  20%, 80%{
+    margin-left: -12px;
+  }
+  40%, 60%{
+    margin-left: 12px;
+  }
+}
+
+form .field .input-area
+{
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+form input
+{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 45px;
+  font-size: 18px;
+  background: none;
+  caret-color:rgb(135, 6, 178);
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  border-bottom-width: 2px;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+form .field input:focus, form .field.valid input
+{
+  border-color:#9F44D3;
+}
+
+form .field.shake input, form .field.error input
+{
+  border-color: #dc3545;
+}
+
+.field .input-area i
+{
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.input-area .icon
+{
+  left: 15px;
+  color: #bfbfbf;
+  transition: color 0.2s ease;
+}
+
+.input-area .error-icon
+{
+  right: 15px;
+  color: #dc3545;
+}
+form input:focus ~ .icon, form .field.valid .icon
+{
+  color:#9F44D3;
+}
+
+form .field.shake input:focus ~ .icon, form .field.error input:focus ~ .icon
+{
+  color: #bfbfbf;
+}
+
+form input::placeholder
+{
+  color: #bfbfbf;
+  font-size: 17px;
+}
+
+form .field .error-txt
+{
+  color: #dc3545;
+  text-align: left;
+  margin-top: 5px;
+}
+
+form .field .error
+{
+  display: none;
+}
+
+form .field.shake .error, form .field.error .error
+{
+  display: block;
+}
+
+form .pass-txt
+{
+  text-align: left;
+  margin-top: -10px;
+  
+}
+
+.wrapper a
+{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#9F44D3;
+  text-decoration: none;
+}
+
+.wrapper a:hover
+{
+  text-decoration: underline;
+}
+
+form .button {
+  height: 45px;
+  margin: 45px 0;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #da83ff, #9f01ea);
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #e4acfc, #650693);
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .gender-details .category {
+    width: 100%;
+  }
+
+  .container form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .user-details::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+
+/*form .btn{
+  margin: 30px 0;
+  height: 45px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: 1;
+  background: -webkit-linear-gradient(right, #e4acfc, #9f01ea, #650693, #9f01ea);
+  transition: all 0.4s;
+}
+form .btn:hover .inner input{
+  left: 0;
+}
+form .btn input{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}*/
+

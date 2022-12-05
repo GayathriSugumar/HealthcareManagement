@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <meta name="viewport"
 	content="width = device-width, initial-scale = 1.0">
-<title>User Forgot Password </title>
+<title>User OTP Verification</title>
 <%@include file="component/allcss.jsp"%>
 <link href="indexnav.css" rel="stylesheet">
 <link href="admin.css" rel="stylesheet">
@@ -35,33 +35,34 @@ response.setHeader("Expires", "0");
 
 response.setDateHeader("Expires", -1);
 %>
+
 </head>
-<body style="margin-top: 50px;">
+<body>
 
-	<%@include file="component/navbar.jsp"%>
 	<div class="wrapper">
-		<header style="color: #9F44D3">Forgot Password </header>
+		<%
+		if (request.getAttribute("message") != null) {
+			out.print("<p class='text-primary ml-1'>" + request.getAttribute("message") + "</p>");
+		}
+		%>
+		<header style="color: #9F44D3">OTP Verification</header>
+		<form action="UserOtp" method="post">
 
-		<form action="userChangePassword" method="post">
-
-			<div class="field password">
+			<div class="field email">
 				<div class="input-area">
-				
-					<input type="email" placeholder="Enter Email" name="email" required>
-					<i class="icon fas fa-envelope"></i> <i
-						class="error error-icon fas fa-exclamation-circle"></i>
+					<input required name="otp" type="password"
+						placeholder="Enter Your OTP"> <i class="icon fas fa-lock"></i>
+					<i class="error error-icon fas fa-exclamation-circle"></i>
+
 				</div>
 			</div>
-			
-			<div class="button">
-				<input type="hidden" value="${userObj.id }" name="userId"> <input
-					type="submit" class="btn" value="Generate OTP">
 
+			<div class="button">
+				<input type="submit" value="verify">
 			</div>
+
 		</form>
 	</div>
 
-
 </body>
 </html>
-

@@ -11,11 +11,21 @@
 <%@include file="../component/allcss.jsp"%>
 <link href="Nav.css" rel="stylesheet">
 <style type="text/css">
+.navbar{
+	height: 49px;
+	
+}
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
+<%
+response.setHeader("Pragma","no-cache");
+response.setHeader("Cache-Control","no-store");
+response.setHeader("Expires","0");
+response.setDateHeader("Expires",-1);
 
+%>
 </head>
 <body>
 	<%@include file="navbar.jsp"%>

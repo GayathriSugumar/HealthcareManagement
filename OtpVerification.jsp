@@ -34,6 +34,13 @@
 		</c:if>
 
 		<form action="OTPverify" method="post">
+		<%
+		  			if(request.getAttribute("message")!=null)
+		  			{
+		  				out.print("<p class='text-danger ml-1'>"+request.getAttribute("message")+"</p>");
+		  			}
+		  
+		  %>
 
 			<div class="field email">
 				<div class="input-area">

@@ -16,6 +16,15 @@
 	height: 49px;
 }
 </style>
+<%
+response.setHeader("Pragma", "no-cache");
+
+response.setHeader("Cache-Control", "no-store");
+
+response.setHeader("Expires", "0");
+
+response.setDateHeader("Expires", -1);
+%>
 </head>
 <body style="background: linear-gradient(#ffff, #dda3ff)">
 	<%@include file="component/navbar.jsp"%>
@@ -47,14 +56,12 @@
 			<div class="field password">
 				<div class="input-area">
 					<input required name="appointmentFees" type="text"
-						 readonly value="Rs.1000"> 1000<i class="icon fas fa-lock"></i> <i
+						 readonly value="Rs.1000"><i class="icon fas fa-lock"></i> <i
 						class="error error-icon fas fa-exclamation-circle"></i>
 				</div>
 			</div>
-
-			
-
 			<div class="button">
+			<a href="OtpVerification.jsp"></a>
 				<input type="submit" value="Continue">
 			</div>
 

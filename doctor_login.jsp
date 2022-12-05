@@ -13,10 +13,30 @@
 .navbar {
 	height: 49px;
 }
+body {
+	background: url(image/appoint.jpg) no-repeat center center fixed;
+	
+	/*  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+  style="background: linear-gradient(#ffff, #dda3ff)"*/
+  
+	background-size: cover;
+	background-width: 80%;
+}
 </style>
+<%
+response.setHeader("Pragma", "no-cache");
+
+response.setHeader("Cache-Control", "no-store");
+
+response.setHeader("Expires", "0");
+
+response.setDateHeader("Expires", -1);
+%>
 </head>
 
-<body style="background: linear-gradient(#ffff, #e2b9f9)">
+<body >
 
 	<%@include file="component/navbar.jsp"%>
 
@@ -53,7 +73,7 @@
 			</div>
 
 			<div class="pass-txt">
-				<a href="edit_Profile.jsp">Forgot password?</a>
+				<a href="doctor/ChangePassword.jsp">Forgot password?</a>
 			</div>
 
 			<div class="button">

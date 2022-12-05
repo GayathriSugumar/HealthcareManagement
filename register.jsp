@@ -7,10 +7,31 @@
 <meta charset="ISO-8859-1">
 <title>User Register</title>
 <%@include file="component/allcss.jsp"%>
-<link href="indexnav.css" rel="stylesheet">
+
 <link href="admin.css" rel="stylesheet">
+<style type="text/css">
+body {
+	background: url(image/login5.png) no-repeat center center fixed;
+	/*  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; 
+  style="background: linear-gradient(#ffff, #dda3ff)"
+  style="background: linear-gradient(#ffff, #dda3ff)"*/
+	background-size: cover;
+	
+}
+</style>
+<%
+response.setHeader("Pragma", "no-cache");
+
+response.setHeader("Cache-Control", "no-store");
+
+response.setHeader("Expires", "0");
+
+response.setDateHeader("Expires", -1);
+%>
 </head>
-<body style="background: linear-gradient(#ffff, #dda3ff)">
+<body>
 	<%@include file="component/navbar.jsp"%>
 
 
@@ -55,12 +76,12 @@
 				<div class="error error-txt">Password can't be blank</div>
 			</div>
 
-				
+
 			<div class="button">
 				<input type="submit" value="Register" />
 			</div>
-				
-			
+
+
 		</form>
 	</div>
 

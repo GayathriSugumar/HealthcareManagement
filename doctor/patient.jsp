@@ -11,6 +11,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 <title>Doctor DashBoard</title>
 <%@include file="../component/allcss.jsp"%>
 <style type="text/css">
@@ -18,10 +19,26 @@
 	height: 49px;
 	
 }
+body { 
+  background: url(../image/user7.jpeg) no-repeat center center fixed; 
+ /*  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover; */
+  background-size: cover;
+}
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 </style>
+<%
+response.setHeader("Pragma", "no-cache");
+
+response.setHeader("Cache-Control", "no-store");
+
+response.setHeader("Expires", "0");
+
+response.setDateHeader("Expires", -1);
+%>
 </head>
 <body>
 	<c:if test="${empty doctorObj }">
@@ -53,7 +70,6 @@
 									<th scope="col">Gender</th>
 									<th scope="col">Age</th>
 									<th scope="col">Appointment Date</th>
-									<th scope="col">Email</th>
 									<th scope="col">Mobile</th>
 									<th scope="col">Illness</th>
 									<th scope="col">Status</th>
@@ -72,7 +88,7 @@
 									<td><%=appointment.getGender()%></td>
 									<td><%=appointment.getAge()%></td>
 									<td><%=appointment.getAppointmentDate()%></td>
-									<td><%=appointment.getEmail() %></td>
+									
 									<td><%=appointment.getMobile() %></td>
 									<td><%=appointment.getIllness() %></td>
 									<td><%=appointment.getStatus() %></td>

@@ -32,6 +32,9 @@
 
 						<li class="nav-item px-3"><a class="nav-link active"
 							aria-current="page" href="user_appointment.jsp">Appointment</a></li>
+							
+						<li class="nav-item px-3"><a class="nav-link active"
+							aria-current="page" href="FeedBack.jsp">Feed Back</a></li>
 
 					</c:if>
 
